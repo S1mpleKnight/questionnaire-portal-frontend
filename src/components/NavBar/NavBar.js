@@ -7,18 +7,19 @@ export function NavBar() {
         <>
             <Navbar bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand href="/">
-                        <img src={logo} alt="logo" className="d-inline-block align-top"/>
-                        {' '}
+                    <Navbar.Brand>
+                        <img
+                            src={logo} alt="logo" className="d-inline-block align-top"
+                        />{' '}
                         Questionnaire portal
                     </Navbar.Brand>
                     <Nav>
-                        <Nav.Link href="/">Field</Nav.Link>
-                        <Nav.Link href="/">Responses</Nav.Link>
+                        <Nav.Link href="/fields">Field</Nav.Link>
+                        <Nav.Link href="/responses">Responses</Nav.Link>
                         <NavDropdown title="John Doe" id="navbarDropdown">
-                            <NavDropdown.Item href="/">Edit Profile</NavDropdown.Item>
-                            <NavDropdown.Item href="/">Change Password</NavDropdown.Item>
-                            <NavDropdown.Item href="/">Log Out</NavDropdown.Item>
+                            <NavDropdown.Item href="/profile">Edit Profile</NavDropdown.Item>
+                            <NavDropdown.Item href="/password">Change Password</NavDropdown.Item>
+                            <NavDropdown.Item href="/congratulation">Log Out</NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                 </Container>
