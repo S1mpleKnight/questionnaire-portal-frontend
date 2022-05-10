@@ -1,5 +1,5 @@
 import logo from "./logo1.png"
-import {Button, Col, Form, FormText, Image, Row} from "react-bootstrap";
+import {Button, Form, Image} from "react-bootstrap";
 import React from "react";
 
 function Registration() {
