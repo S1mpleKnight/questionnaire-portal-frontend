@@ -5,7 +5,7 @@ function ChangePassword() {
     return (
         <>
             <div className="bg-light" style={{height: '100vh'}}>
-                <NavBar/>
+                <NavBar auth={true}/>
                 <Container style={{width: '35vw'}} className="bg-white border mt-4 p-0">
                     <div className="mt-3 m-xl-3 m-sm-3">
                         <h3>Change password</h3>

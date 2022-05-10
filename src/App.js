@@ -7,6 +7,7 @@ import Congratulation from "./components/Congratulation/Congratulation";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import Login from "./components/Login/Login";
 import Registration from "./components/Registration/Registration";
+import Questionnaire from "./components/Questionnaire/Questionnaire";
 
 function App() {
   return (
@@ -16,9 +17,10 @@ function App() {
             <Route path="/password" element={<ChangePassword/>}/>
             <Route path="/fields" element={<FieldsList/>}/>
             <Route path="/responses" element={<Responses/>}/>
-            <Route path="/congratulation" element={<Congratulation/>}/>
+            <Route path="/success" element={<Congratulation/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/registration" element={<Registration/>}/>
+            <Route path="/questionnaires/:questionnaireId" element={<Questionnaire/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </>
