@@ -1,11 +1,11 @@
 import {Form, Button, Container} from "react-bootstrap";
-import {NavBar} from "../NavBar/NavBar";
+import {NavBar} from "../../components/NavBar/NavBar";
 
 function EditProfile() {
     return (
         <>
             <div className="bg-light" style={{height: '100vh'}}>
-                <NavBar/>
+                <NavBar auth={true}/>
                 <Container style={{width: '35vw'}} className="bg-white border mt-4 p-0">
                     <div className="mt-3 m-xl-3 m-sm-3">
                         <h3>Edit profile</h3>
