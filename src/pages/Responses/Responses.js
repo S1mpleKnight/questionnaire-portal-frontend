@@ -1,4 +1,4 @@
-import {NavBar} from "../NavBar/NavBar";
+import {NavBar} from "../../components/NavBar/NavBar";
 import {Button, Col, Container, Dropdown, DropdownButton, Form, Modal, Pagination, Row, Table} from "react-bootstrap";
 
 function Responses() {

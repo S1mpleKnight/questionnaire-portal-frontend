@@ -1,4 +1,4 @@
-import {NavBar} from "../NavBar/NavBar";
+import {NavBar} from "../../components/NavBar/NavBar";
 import {Button, Container, Form} from "react-bootstrap";
 
 function ChangePassword() {

@@ -1,16 +1,12 @@
-import {Form, Button, Container} from "react-bootstrap";
-import {NavBar} from "../NavBar/NavBar";
+import {NavBar} from "../../components/NavBar/NavBar";
+import {Button, Container, Form} from "react-bootstrap";
 
-function EditProfile() {
+function Questionnaire() {
     return (
         <>
             <div className="bg-light" style={{height: '100vh'}}>
-                <NavBar auth={true}/>
+                <NavBar auth={false}/>
                 <Container style={{width: '35vw'}} className="bg-white border mt-4 p-0">
-                    <div className="mt-3 m-xl-3 m-sm-3">
-                        <h3>Edit profile</h3>
-                    </div>
-                    <hr/>
                     <Form className="px-5 py-4">
                         <Form.Group className="fw-light mb-3" controlId="firstname">
                             <Form.Label className="text-muted">First Name</Form.Label>
@@ -22,7 +18,7 @@ function EditProfile() {
                         </Form.Group>
                         <Form.Group className="fw-light mb-3" controlId="email" required>
                             <Form.Label className="text-muted">Email</Form.Label>
-                                <span className="text-danger required">
+                            <span className="text-danger required">
                                     *
                                 </span>
                             <Form.Control type="email" placeholder="Enter email" />
@@ -32,7 +28,7 @@ function EditProfile() {
                             <Form.Control type="input" placeholder="Enter phone number"/>
                         </Form.Group>
                         <Button className="w-25" variant="primary" type="submit">
-                            SAVE
+                            SUBMIT
                         </Button>
                     </Form>
                 </Container>
@@ -41,4 +37,4 @@ function EditProfile() {
     )
 }
 
-export default EditProfile;
+export default Questionnaire;

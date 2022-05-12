@@ -1,13 +1,13 @@
-import EditProfile from "./components/EditProfile/EditProfile";
-import ChangePassword from "./components/ChangePassword/ChangePassword";
-import FieldsList from "./components/FieldsList/FieldsList";
-import Responses from "./components/Responses/Responses";
+import EditProfile from "./pages/EditProfile/EditProfile";
+import ChangePassword from "./pages/ChangePassword/ChangePassword";
+import FieldsList from "./pages/FieldsList/FieldsList";
+import Responses from "./pages/Responses/Responses";
 import {Routes, Route} from 'react-router-dom'
-import Congratulation from "./components/Congratulation/Congratulation";
-import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
-import Login from "./components/Login/Login";
-import Registration from "./components/Registration/Registration";
-import Questionnaire from "./components/Questionnaire/Questionnaire";
+import Congratulation from "./pages/Congratulation/Congratulation";
+import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
+import Login from "./pages/Login/Login";
+import Registration from "./pages/Registration/Registration";
+import Questionnaire from "./pages/Questionnaire/Questionnaire";
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
             <Route path="/responses" element={<Responses/>}/>
             <Route path="/success" element={<Congratulation/>}/>
             <Route path="/login" element={<Login/>}/>
-            <Route path="/registration" element={<Registration/>}/>
+            <Route path="/register" element={<Registration/>}/>
             <Route path="/questionnaires/:questionnaireId" element={<Questionnaire/>}/>
             <Route path="*" element={<NotFoundPage/>}/>
         </Routes>

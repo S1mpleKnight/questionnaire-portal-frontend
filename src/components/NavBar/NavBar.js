@@ -1,11 +1,17 @@
 import React from "react";
 import {Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import logo from "./logo1.png"
+import AuthService from "../../services/AuthService";
 
 export class NavBar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {authorized: props.auth}
+        this.handleLogout = this.handleLogout.bind(this)
+    }
+
+    handleLogout() {
+        AuthService.logout()
     }
 
     render() {
@@ -25,7 +31,7 @@ export class NavBar extends React.Component {
                                 <NavDropdown className="mx-4 fw-bold " title="John Doe" id="navbarDropdown">
                                     <NavDropdown.Item href="/profile">Edit Profile</NavDropdown.Item>
                                     <NavDropdown.Item href="/password">Change Password</NavDropdown.Item>
-                                    <NavDropdown.Item href="/login">Log Out</NavDropdown.Item>
+                                    <NavDropdown.Item href="/login" onClick={this.handleLogout}>Log Out</NavDropdown.Item>
                                 </NavDropdown>
                             </Nav>
                         </Container>
