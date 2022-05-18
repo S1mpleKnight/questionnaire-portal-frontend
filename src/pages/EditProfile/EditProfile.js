@@ -68,14 +68,16 @@ class EditProfile extends Component {
     }
 
     handleValidation() {
-        if (!this.state.email && typeof this.state.email !== "undefined") {
-            if (!this.validateEmail(this.state.email)) {
-                this.setState({message: "Email is not valid"})
-                return false;
-            }
+        if (!this.state.email) {
+            this.setState({message: "Email is not valid"})
+            return false
+        }
+        if (!this.validateEmail(this.state.email)) {
+            this.setState({message: "Email is not valid"})
+            return false;
         }
 
-        if (!this.state.firstname && typeof this.state.firstname !== "undefined") {
+        if (!this.state.firstname) {
             this.setState({message: "Firstname cannot be empty"});
             return false;
         }
@@ -84,7 +86,7 @@ class EditProfile extends Component {
             return false;
         }
 
-        if (!this.state.lastname && typeof this.state.lastname !== "undefined") {
+        if (!this.state.lastname) {
             this.setState({message: "Lastname cannot be empty"});
             return false;
         }
@@ -93,7 +95,7 @@ class EditProfile extends Component {
             return false;
         }
 
-        if (!this.state.phone && typeof this.state.phone !== "undefined") {
+        if (!this.state.phone) {
             this.setState({message: "Phone cannot be empty"});
             return false;
         }
@@ -125,6 +127,7 @@ class EditProfile extends Component {
                     this.setState({errors: errMsg})
                 }
             )
+            AuthService.logout()
         }
     }
 

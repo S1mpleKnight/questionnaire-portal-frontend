@@ -12,8 +12,8 @@ class UserService {
         return http.put(USER_PROFILE_URL, data);
     }
 
-    updatePassword() {
-        return http.put(USER_PASSWORD_URL);
+    updatePassword(data) {
+        return http.put(USER_PASSWORD_URL, data);
     }
 }
 
