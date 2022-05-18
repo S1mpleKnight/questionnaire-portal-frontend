@@ -118,7 +118,6 @@ class FieldsList extends Component {
                 (r) => {
                     this.setState({
                         fields: r.data.content,
-                        loaded: true
                     })
                 },
                 error => {
