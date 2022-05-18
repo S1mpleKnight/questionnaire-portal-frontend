@@ -26,7 +26,6 @@ class EditProfile extends Component {
         UserService.getProfileData()
             .then(
                 (r) => {
-                    console.log(r)
                     this.setState({
                         email: r.data.email,
                         phone: r.data.phone,
@@ -35,10 +34,7 @@ class EditProfile extends Component {
                     })
                 },
                 error => {
-                    const errMsg = (error.response && error.response.data && error.response.data.message)
-                        || error.message
-                        || error.toString()
-                    this.setState({errors: errMsg})
+                    this.setState({message: error.response.data})
                 }
             )
     }
