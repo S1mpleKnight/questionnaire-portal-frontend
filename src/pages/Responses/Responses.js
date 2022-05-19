@@ -19,7 +19,6 @@ class Responses extends Component {
         ResponseService.getAllFields()
             .then(
                 (r) => {
-                    console.log(r)
                     this.setState({
                         responses: r.data.content.filter((response) => response.responses.length > 0),
                     })
@@ -75,7 +74,7 @@ class Responses extends Component {
                                     this.state.responses.map((response) => (
                                         <tr key={response.id}>
                                             {response.responses.map((responseValue) =>
-                                                (<td key={responseValue.position}>{responseValue.label}</td>))}
+                                                (<td key={responseValue.position}>{responseValue.value}</td>))}
                                         </tr>
                                     ))
                                 }
