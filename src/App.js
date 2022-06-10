@@ -20,7 +20,9 @@ function App() {
             <Route path="/success" element={<Congratulation/>}/>
             <Route path="/login" element={<Login/>}/>
             <Route path="/register" element={<Registration/>}/>
-            <Route path="/questionnaires/:questionnaireId" element={<Questionnaire/>}/>
+            <Route path="/questionnaires">
+                <Route path=":questionnaireId" element={<Questionnaire/>}/>
+            </Route>
             <Route path="*" element={<NotFoundPage/>}/>
         </Routes>
       </>

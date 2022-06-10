@@ -1,8 +1,10 @@
 import axios from "axios";
 
 const API_URL = "http://localhost:8080/api/"
+// const API_URL = "https://questionnaire-portal-system.herokuapp.com/api/"
 const LOGIN_ENDPOINT = "login"
 const SIGNUP_ENDPOINT = "register"
+const QUESTIONNAIRE_ENDPOINT = "questionnaires"
 
 class AuthService {
     login(email, password) {
@@ -22,8 +24,13 @@ class AuthService {
             });
     }
 
+    getUserQuestionnaireUrl() {
+        return QUESTIONNAIRE_ENDPOINT + "/" + localStorage.getItem("userId")
+    }
+
     logout() {
         localStorage.removeItem("user");
+        localStorage.removeItem("userId");
     }
 
     register(firstname, lastname, phone, email, password) {

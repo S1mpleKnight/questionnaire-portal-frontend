@@ -108,7 +108,7 @@ class Registration extends React.Component {
             return false;
         }
         if (!this.validatePhone(this.state.phone)) {
-            this.setState({message: "Phone - (from 12 to 15) numbers"});
+            this.setState({message: "Phone - (from 11 to 14) numbers"});
             return false;
         }
 
@@ -142,7 +142,7 @@ class Registration extends React.Component {
     }
 
     validatePhone = (phone) => {
-        return String(phone).length >= 12 && String(phone).length <= 15 && String(phone).toLowerCase().match(/^(\+)?[0-9]+/)
+        return String(phone).length >= 11 && String(phone).length <= 14 && String(phone).toLowerCase().match(/^(\+)?[0-9]+/)
     }
 
     validateEmail = (email) => {

@@ -58,10 +58,7 @@ class Login extends React.Component {
                 .then(
                     () => this.forceUpdate(),//<Navigate to="/fields"/>,
                     error => {
-                        const errMsg = (error.response && error.response.data && error.response.data.message)
-                            || error.message()
-                            || error.toString()
-                        this.setState({errors: errMsg})
+                        this.setState({message: error.response.data})
                     }
                 )
         }
